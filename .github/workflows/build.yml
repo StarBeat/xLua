@@ -5,6 +5,14 @@ on:
     paths: 
       - build/**
       - .github/workflows/build.yml
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'
 
 jobs:
   android:
